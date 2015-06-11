@@ -19,12 +19,19 @@ end
 # Define "instructor"
 class Instructor
 
-  def initialize
+  def initialize(name)
+    @name = name
+  end
+
+  def teach
+    "Everything in Ruby is an object, dontcha know."
   end
 
 end
 
 # Print stuff
 kevin = Student.new("Kevin")
+julie = Instructor.new("Julie")
 
+puts julie.teach
 puts kevin.learn
