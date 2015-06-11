@@ -1,4 +1,4 @@
-# Author: Kevin McLoughlin
+# Author: Chris McLoughlin
 #
 # Fun n' games with Classes
 
@@ -44,11 +44,11 @@ class Instructor < Person
 end
 
 # Make stuff
-kevin = Student.new("Kevin")
-julie = Instructor.new("Julie")
+chris = Student.new("Chris")
+christina = Instructor.new("Christina")
 
-puts julie.greeting
-puts kevin.greeting
+puts christina.greeting
+puts chris.greeting
 
-puts julie.teach
-puts kevin.learn
+puts christina.teach
+puts chris.learn
