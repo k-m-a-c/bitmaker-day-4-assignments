@@ -52,3 +52,6 @@ puts chris.greeting
 
 puts christina.teach
 puts chris.learn
+
+# you can't call the 'teach' method on the Student class, because it's not a behaviour that's associated with it.
+# similarly you can't call the 'learn' method on the Instructor class.
