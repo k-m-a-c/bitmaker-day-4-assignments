@@ -4,12 +4,28 @@ require_relative('rover.rb')
 require_relative('plateau.rb')
 
 # create a plateau
-mars_plateau = Plateau.new("terminal moraine", 5, 5)
+puts "Input plateau name:"
+plateau_name = gets.chomp.to_s
+
+puts "Input plateau x value:"
+plateau_x = gets.chomp.to_i
+
+puts "Input plateau y value:"
+plateau_y = gets.chomp.to_i
+
+mars_plateau = Plateau.new(plateau_name, plateau_x, plateau_y)
 mars_plateau.show_plateau
 
 # create a couple rovers
-rover_1 = Rover.new("rover-1", 1, 2, "N")
-rover_2 = Rover.new("rover-2", 3, 3, "E")
+puts "Input name for rover #1:"
+rover_1_name = gets.chomp.to_s
+
+rover_1 = Rover.new(rover_1_name, 1, 2, "N")
+
+puts "Input name for rover #2:"
+rover_2_name = gets.chomp.to_s
+
+rover_2 = Rover.new(rover_2_name, 3, 3, "E")
 
 # show where the rovers are
 rover_1.show_position
