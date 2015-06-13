@@ -53,10 +53,6 @@ class Rover
   end
 end
 
-# get the size of our plateau
-# print "What is the size of our plateau?"
-# plateau_size = gets.chomp.to_i
-
 # create a couple rovers
 rover_1 = Rover.new("rover-1", 1, 2, "N")
 rover_2 = Rover.new("rover-2", 3, 3, "E")
