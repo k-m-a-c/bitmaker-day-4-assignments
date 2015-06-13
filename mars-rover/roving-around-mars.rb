@@ -5,9 +5,7 @@ require_relative('plateau.rb')
 
 # create a plateau
 mars_plateau = Plateau.new("terminal moraine", 5, 5)
-mars_plateau.plateau_name
-mars_plateau.plateau_x
-mars_plateau.plateau_y
+mars_plateau.show_plateau
 
 # create a couple rovers
 rover_1 = Rover.new("rover-1", 1, 2, "N")
