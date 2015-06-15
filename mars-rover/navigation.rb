@@ -5,9 +5,27 @@
 # --> stop at a certain 'x' value
 # --> stop at a certain 'y' value
 
-require_relative('plateau.rb')
-
 module Navigation
+
+  def execute_instructions(instructions)
+
+    # parse a string on the individual character and interpret it as an instruction
+    instructions.each_char do |instruction|
+
+      # define what the rover should do for each individual instruction it receives
+      case instruction
+      when "M"
+        move
+      when "R"
+        turn_right
+      when "L"
+        turn_left
+      else
+        puts "Invalid instructions."
+      end
+      puts "<#{@name}>: [MOVED TO] #{@heading} #{@rover_x} #{@rover_y}"
+    end
+  end
 
   # The list of possible headings
   COMPASS = %w[N E S W]
@@ -45,26 +63,22 @@ module Navigation
 
     @rover_x += (change_in_x * speed)
     @rover_y += (change_in_y * speed)
+
+    # if in_bounds == true
+    #   @rover_x += (change_in_x * speed)
+    #   @rover_y += (change_in_y * speed)
+    # else
+    #   puts "<#{@name}: [STOPPED AT EDGE] #{@heading} #{rover_x} #{rover_y}"
+    # end
   end
 
-  def execute_instructions(instructions)
+  # def in_bounds
+  #   case plateau
+  #   when (@rover_x + 1) > @plateau_x && (@rover_y + 1 ) > @plateau_y
+  #     false
+  #   when (@rover_x + 1) < @plateau_x && (@rover_y + 1 ) < @plateau_y
+  #     true
+  #   end
+  # end
 
-    # parse a string on the individual character and interpret it as an instruction
-    instructions.each_char do |instruction|
-
-      # define what the rover should do for each individual instruction it receives
-      case instruction
-      when "M"
-        move
-      when "R"
-        turn_right
-      when "L"
-        turn_left
-      else
-        puts "Invalid instructions."
-      end
-      puts "<#{@name}>: [MOVED TO] #{@heading} #{@rover_x} #{@rover_y}"
-    end
-
-  end
 end

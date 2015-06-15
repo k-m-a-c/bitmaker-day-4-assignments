@@ -1,6 +1,7 @@
 # Author: Kevin McLoughlin
 
 require_relative('navigation.rb')
+require_relative('plateau.rb')
 
 class Rover
   include Navigation

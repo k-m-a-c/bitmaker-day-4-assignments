@@ -10,6 +10,6 @@ class Plateau
   end
 
   def show_plateau
-    puts "#{@plateau_name}: x = #{@plateau_x}, y = #{@plateau_y}"
+    "#{@plateau_name}: x = #{@plateau_x}, y = #{@plateau_y}"
   end
 end
